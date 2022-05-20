@@ -1,0 +1,270 @@
+﻿<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal2.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="modelos.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="memorias.html">1.2 Analisis de los componentes.</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="organizacion.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="estructuras.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="ciclo.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="CPUReales.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="chip.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="apps.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="ambientes.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="basicos.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="Paralela.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="compartida.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="distribuida.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="estudio.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+	 </UL>
+	</DIV>
+
+	
+	<bR><BR><bR><BR>
+	<h3>1.2.1.1 Arquitecturas.</h3>
+	<p>
+Ademas de las Arquitecturas clasicas  mencionadas anteriormente, en la actualidad han aparecido Arquitecturas híbridas entre la Von Newman y la Harvard, buscando conservar la flexibilidad, pero mejorando el rendimiento.
+Esta escuela pretende aplicar un enfoque totalmente distinto al tradicional hasta entonces, que paso a conocerse como computadoras de conjunto complejo de instrucciones (CISC) para diferenciarla de la nueva tendencia.
+Se implementan instrucciones especiales que realizan funciones complejas, de manera que un programador puede encontrar con seguridad, una instrucción especial que realiza en hardware la función que el necesita.
+CISC vs RISC.
+Considere los siguientes fragmentos de programas:
+	</p>
+
+	<center><img src="imagenes/progr.jpg"  WIDTH="50%" HEIGHT="40%"></center>
+
+
+<p>El total de ciclos de reloj para la versión cisc debe ser:
+(2 movs * 1 ciclo) +(1 mul * 30 ciclos) = 32 ciclos
+
+El total de ciclos de reloj para la version risc debe ser:
+(3 movs * 1 ciclo) +(5 adds * 1 ciclo)+(5 loops *1 ciclo) = 13 ciclos
+</p>	
+
+	<center><img src="imagenes/cisc.jpg"  WIDTH="30%" HEIGHT="50%"></center>
+
+	
+<p>La diferencia entre cisc y risc empieza a ser evidente por medio de la ecuación básica de la eficiencia en cómputo:</p>
+
+	
+	<center><img src="imagenes/cisc2.jpg"  WIDTH="60%" HEIGHT="40%"></center>
+
+<h3>1.2.1.2 Tipos.</h3>
+<P>Los CPUs modernos pueden clasificarse de acuerdo a varias características, tales como: el tamaño del ALU o del Bus de conexión al exterior (8, 16, 32, 64 bits), 
+si tienen cauce pipeline, si son tipo CISC o RISC, Von Newmann o Harvard y si solo tienen instrucciones enteras o implementan también instrucciones de punto flotante.
+Clasificación de procesadores intel</P>
+
+<P>¿Qué procesador necesito?
+No hace mucho tiempo, el procesador era algo totalmente desconocido por los usuarios de PCs. Esto fue cambiando con el tiempo y en la actualidad cualquier 
+persona al comprar un equipo se pregunta acerca de los atributos elementales de este dispositivo.
+Es que el procesador es una parte esencial de la computadora, por eso generalmente se la conoce como su “cerebro”.
+Procesadores Intel para portátiles
+Lo primero a definir es qué necesidades se tienen.
+Si la movilidad o la falta de espacio son elementos claves a considerar se optará por una computadora portátil, o laptop.
+Intel ofrece para estos dispositivos diferentes familias de procesadores según los requerimientos de cada usuario.
+Los procesadores para portátiles calificados con 5 estrellas satisfacen la máxima exigencia móvil.
+Si necesitas que tu portátil sea extremadamente potente, deberás optar por el procesador Intel® Core™ 2 Quad Serie Q9000, 
+los procesadores que permiten ejecutar varias aplicaciones simultáneamente, con la posibilidad de vivir los juegos con mucho realismo y excelente 
+performance gráfica.</P>
+
+<h3>1.2.1.3 Características.</h3>
+<P>Las características más importantes a considerar al escoger un CPU para usarlo (idealmente) en una aplicación, son:
+ Modelo del programador (Conjunto de registros que el programador puede utilizar), forman el modelo mental del CPU 
+que el programador utiliza al programar en ensamblador.
+Conjunto de instrucciones que puede ejecutar el CPU
+Modos de direccionamiento que pueden usarse para obtener los operandos de las instrucciones.
+Ciclo de instrucción (el conjunto de pasos que realiza el CPU para procesar cada instrucción)
+ Buses de interconexión, usados para que el CPU lea y escriba a la memoria y a los dispositivos de entrada y salida.</P>
+<p><b>Características de los CPU
+¿En qué casos debo seleccionar un(os) CPU(s)?</p></B>
+<p>
+•Acciones Directas</li><BR>
+•Integrar un nuevo sistema de cómputo<BR>
+•Reemplazar un cpu dañado<BR>
+•Actualizar un sistema de cómputo<BR>
+•Acciones Indirectas<BR>
+•Comprar equipo de computo nuevo<<BR>
+•Construir un equipo de control(Microcontrolador)</p>
+
+	
+<h3>1.2.1.4 Funcionamiento (ALU, unidad de control, Registros y buses internos)</h3>
+<p>Todos los CPU tienen como funcion principal la ejecucion de un programa acorde a la aplicacion del mismo.
+	 Un programa es un conjunto de instrucciones almacenadas de acuerdo al orden en que deben ejecutarse.
+	Por lo tanto, toda computadora debe ser capaz de procesar las instrucciones de su programa en un ciclo de instruccion, 
+consistente en un numero de etapas que varia con cadaCPU, pero que tradicionalmente han sido tres (trabajando en un cpu ideal):</p>
+
+<h3>1-Búsqueda del código de Instrucción.</h3>
+<p>Esta consiste en leer de la memoria cual sera la siguiente instruccion a ejecutar, la cual esta almacenada en forma de un codigo numerico que indica
+ cual de todas las operaciones que puede realizar el CPU sera la siguiente y con que operandos se ejecutara.</p>
+
+<h3>2- Decodificación.</h3>
+<p>Consiste en tomar el codigo numerico e identificar a cual de las operaciones que puede realizar el CPU corresponde dicho codigo.
+    Esta etapa usualmente se realiza con un decodificador binario.</p>
+
+<h3>3- Ejecución.</h3>
+<p>En esta etapa se lleva a cabo la operacion sobre los datos que se vayan a procesar.
+En general, la unidad de control (UC) genera las señales de control necesarias para llevar los datos a las entradas de la Unidad Aritmetica Logica,
+ la cual efectuara las operaciones aritmeticas y logicas.Posteriormente, la unidad de control generara las señales de control necesarias para transferir la salida de la Unidad Aritmetica Logica al registro
+ donde seran almacenados los resultados para su uso posterior.</p>
+
+<h3>1.2.2 Memoria.</h3>
+<p>Una memoria es un dispositivo que puede mantenerse en por lo menos dos estados estables por un cierto periodo de tiempo. Cada uno de estos estados estables puede utilizarse para representar un bit. 
+A un dispositivo con la capacidad de almacenar por lo menos un bit se le conoce como celda basica de. Memoria Un dispositivo de memoria completo se forma con varias celdas basicas y los circuitos asociados
+ para poder leer y escribir dichas celdas basicas, agrupadas como localidades de memoria que permitan almacenar un grupo de N bits. El número de bits que puede almacenar cada localidad de memoria es conocido
+ como el ancho de palabra de la memoria. Coincide con el ancho del bus de datos. Uno de los circuitos auxiliares que integran la memoria es el decodificador de direcciones. Su funcion es la de activar a las
+celdas basicas que van a ser leidas o escritas a partir de la direccion presente en el bus de direcciones. Tiene como entradas las n lineas del bus de direcciones y 2N lineas de habilitacion de localidad, 
+cada una correspondiente a una combinacion binaria distinta de los bits de direcciones. Por lo tanto, el numero de localidades de memoria disponibles en un dispositivo (T) se relaciona con el numero de 
+lineas de direccion N por T= 2N.
+</p>
+
+<h3>1.2.2.1 Conceptos básicos del manejo de la memoria.</h3>
+<p>Se produce bajo el control directo y continuo del programa que solicita la operación de E/S. tanto en la entrada y salida programada como con interrupciones, 
+el procesador es responsable de extraer los datos de la memoria en una salida, y almacenar los datos en la memoria principal. El problema con la E/S es que el procesador 
+tiene que esperar un tiempo considerable hasta que el modulo en cuestion este preparado para recibir o transmitir datos
+</p>
+
+<h3>1.2.2.2. Memoria principal Semiconductora</h3>
+<p>La memoria de semiconductor usa circuitos integrados basados en semiconductores para almacenar informacion. Un chip de memoria de semiconductor puede contener millones de minusculos transistores o condensadores. 
+Existen memorias de semiconductor de ambos tipos: volátiles y no volatiles. En las computadoras modernas, la memoria principal consiste casi exclusivamente en memoria de semiconductor volatil y dinamica, también conocida
+ como memoria dinámica de acceso aleatorio o más comunmente RAM, su acronimo ingles. Con el cambio de siglo, ha habido un crecimiento constante en el uso de un nuevo tipo de memoria de semiconductor no volatil llamado memoria flash.
+ Dicho crecimiento se ha dado, principalmente en el campo de las memorias fuera de linea en computadoras domesticas. Las memorias de semiconductor no volatiles se estan usando tambien como memorias secundarias en varios
+ dispositivos de electronica avanzada y computadoras especializadas y no especializadas.
+</p>
+
+
+<h3>1.2.2.3 Memoria Cache</h3>
+<p>En informatica, la cache es la memoria de acceso rapido de una computadora, que guarda temporalmente las ultimas informaciones procesadas.
+La memoria cache es un bufer especial de memoria que poseen las computadoras, que funciona de manera similar a la memoria principal, pero es de menor tamaño y de acceso mas rapido. Es usada por el microprocesador para reducir 
+el tiempo de acceso a datos ubicados en la memoria principal que se utilizan con más frecuencia.
+La cache es una memoria que se situa entre la unidad central de procesamiento (CPU) y la memoria de acceso aleatorio (RAM) para acelerar el intercambio de datos.
+Cuando se accede por primera vez a un dato, se hace una copia en la cache; los accesos siguientes se realizan a dicha copia, haciendo que sea menor el tiempo de acceso medio al dato. Cuando el microprocesador necesita leer 
+o escribir en una ubicacion en memoria principal, primero verifica si una copia de los datos esta en la cache; si es asi, el microprocesador de inmediato lee o escribe en la memoria cache, que es mucho mas rapido que de la 
+lectura o la escritura a la memoria principal.
+</p>
+
+<h3>1.2.3 Manejo de la entrada/salida.</h3>
+<h3>1.2.3.1 Modulos de Entrada/Salida</h3>
+<p>Los modulos de entrada y salida están conectados con el procesador y la memoria principal, y cada uno controla uno o mas dispositivos externos. La arquitectura de E/S es su interfaz con el exterior,
+ esta arquitectura se diseña de manera que permita una forma sistematica de controlar las interacciones con el mundo exterior y proporcione al sistema operativo la informacion que necesita para gestionar 
+la actividad de E/S. Hay tres técnicas de E/S principales:
+</p>
+
+<h3>1.2.3.2. Entrada/Salida Programada</h3>
+<p>Se produce bajo el control directo y continuo del programa que solicita la operacion de E/S. tanto en la entrada y salida programada como con interrupciones, el procesador es responsable de extraer los datos de la memoria en
+ una salida, y almacenar los datos en la memoria principal. El problema con la E/S es que el procesador tiene que esperar un tiempo considerable hasta que el modulo en cuestion este preparado para recibir o transmitir datos
+</p>
+
+<h3>1.2.3.3. Entrada y salida mediante interruptores</h3>
+
+<p>El programa genera una orden de E/S y despues continua ejecutandose hasta que el hardware lo interrumpe para indicar que la operacion ha concluido. La entrada y salida con interrupciones, aunque es mas eficiente que la sencilla,
+ tambien requiere la intervencion activa del procesador para transferir los datos entre la memoria y el modulo de E/S.
+</p>
+
+<h3>1.2.3.4 Acceso directo a memoria</h3>
+<p>Un procesador de E/S especifico toma el control de la operacion para transferir un bloque de datos. El modulo DMA(Acceso Directo a Memoria) es capaz de imitar al procesador y, de hecho, es capaz de transferir datos desde 
+memoria a traves del bus del sistema. El modulo DMA debe utilizar el bus solo cuando el procesador no lo necesita, o debe forzar al procesador a que suspenda temporalmente su funcionamiento. Un modulo de E/S no es unicamente un 
+conector mecanico que permite enchufar el dispositivo al bus del sistema, sino que ademas, esta dotado de inteligencia, es decir, contiene la logica necesaria para permitir la comunicacion entre el periferico y el bus.
+</p>
+
+<h3>1.2.3.5 Canales y Procesadores de Entrada/Salida.</h3>
+<p>El canal de entrada y salida representa una ampliacion del concepto de DMA. Un canal de entrada y salida puede ejecutar instrucciones de entrada y salida, lo que le confiere un control completo sobre las operaciones de entrada 
+y salida. Un canal selector controla varios dispositivos de velocidad elevada y en un instante dado, se dedica a transferir datos a uno de esos dispositivos, es decir el canal de entrada y salida selecciona un dispositivo y efectua
+ la transferencia de datos. Cada dispositivo o pequeño grupo de dispositivos es manejado por un controlador o modulo de E/S, asi el canal de entrada y salida se utiliza en lugar de la CPU para controlar estos controladores de E/S. 
+Un canal multiplexor puede manejar la entrada y salida de varios dispositivos al mismo tiempo. Para dispositivos de velocidad reducida, un multiplexor de byte acepta o transmite caracteres tan rapido como es posible a varios 
+dispositivos.
+</p>
+
+
+<h3>1.2.4 BUSES</h3>
+<P><b>BUS:</b> Elemento fundamental de intercomunicacion en la arquitectura de Von Newmann. Se define mediante:<BR>
+• Numero y tipo de lineas que lo componen.<BR>
+• Protocolo de transmision de informacion.<BR>
+Consta de un camino que permite comunicar selectivamente un cierto numero de componentes o dispositivos, de acuerdo a unas ciertas reglas o normas de conexion.
+</P>
+
+	<center><img src="imagenes/cisc2.jpg"  WIDTH="60%" HEIGHT="40%"></center>
+
+<P>El bus incluye los conceptos de enlace y conmutador, ya que permite en cada momento seleccionar los dispositivos que se conectan a traves suyo.<BR>
+ •<B>Enlace:</B> Elemento que permite transmitir informacion entre dos o mas dispositivos.<BR>
+•<B>Conmutador:</B> Elemento que permite encaminar la informacion entre varios enlaces, activando unos e inhibiendo otros.<BR>
+•<B> Multiplexado</B> temporal: Utilizacion de las mismas lineas del bus para enviar en momentos distintos, informaciones distintas. En estos buses de incluyen señales adicionales para identificar que informacion esta circulando por el bus en cada momento.
+<BR><BR><B>Sistema Abierto:</B><BR>
+•Sistema que permite acoplar placas de distintos fabricantes.<BR>
+•Hasta hace unos años el estudio de los buses era algo que no se hacia, dado que cada fabricante desarrollaba su propio bus.<BR>
+Los sistemas abiertos supusieron la creacion de estandares que garantizan la compatibilidad entre las placas diseñadas por distintos fabricantes.
+</P>
+
+
+<h3>1.2.4.2 Tipo de buses</h3>
+<p><B>•SERIE y PARALELO:</B> los primeros transmiten bit a bit y los segundos varios bits a la vez.<BR>
+• <B>MULTIPLEXADOS y NO MULTIPLEXADOS o DEDICADOS:</B> los multiplexados realizan diferentes funciones en funcion de las necesidades del momento.<BR>
+• <B>Ejemplo:</B> bus compartido para direcciones y datos ahorro en Hardware y por lo tanto en costos.<BR>  Tipos de Buses<BR>
+• <B>CENTRALIZADOS y DISTRIBUIDOS:</B> necesidad de determinar que elemento transmite y cual recibe. Generalmente existe administracion centralizada 
+por la CPU o procesador.<BR>
+• <B>SINCRONOS y ASINCRONOS (temporizacion):</B> como ocurren los diferentes eventos (comienzo, fin,...) implicados en la transmision de informacion.
+ Utilizacion de una señal de reloj (comunicacion sincrona) o unas lineas de protocolo (comunicacion asincrona).
+</p>
+
+<H3>1.2.4.3 Estructura de buses</H3>
+<p>Los buses se componen de lineas electricas que transmiten un “0” (cero voltios) o un “1” (más de cero voltios).<BR>
+• <B>Líneas/bus de datos:</B> camino para transferir datos entre el resto de componentes de un computador.<BR>
+Su anchura (numero de lineas electricas) suele ser una potencia de dos (8=23, 16=24, 32=25, 64=26,...).Estructura de los Buses<BR>
+• <B>Lineas/bus de direcciones:</B> designan la posicion/direccion de los datos. Son salidas de la CPU/procesador y determinan capacidad de direccionamiento.<BR>
+• <B>Lineas/bus de control:</B> controlan el acceso y uso de las lineas/buses anteriores.
+</p>
+
+	<center><img src="imagenes/buses.jpg"  WIDTH="40%" HEIGHT="50%"></center>
+
+<H3>1.2.4.3 Jerarquia de buses</H3>
+<p><B>Compatibilidad entre buses:</p></B>
+
+<p>• Solo si son electricamente identicos. Las caracteristicas de los diferentes tipos de buses deben estar normalizadas. 
+Ejemplo: bus PCI, AGP, USB, FireWire...Jerarquias de Buses<BR>
+• Antiguamente solo existia un bus principal que lo conectaba todo: bus del sistema.<BR>
+• Actualmente existe un conjunto de buses conectados entre si y formando una jerarquía.<BR>
+• Facilita la mejora del rendimiento de todo el computador al agrupar dentro de los diferentes tipos de buses aquellos 
+componentes del ordenador que tienen aproximadamente la misma velocidad de transmisión de la información.<BR>
+• Mientras mas lejos del CPU, buses mas lentos y normalmente de menos lineas de datos. Jerarquias de Buses<BR>
+• Varios tipos de buses en funcion de su posicion dentro de la jerarquia:<BR>
+• Bus de CPU o “bus local” del procesador: elementos más rapidos tales como la memoria cache.<BR>
+• Bus local o bus del Sistema (Front Side Bus): conecta elementos tales como la memoria principal o dispositivos rapidos (por ejemplo AGP).<BR>
+• Bus de expansion y/o E/S: PCI, USB, ATA, SCSI,...</p>
+
+	<center><img src="imagenes/esquema.jpg"  WIDTH="30%" HEIGHT="40%">&nbsp&nbsp&nbsp<img src="imagenes/esquema2.jpg"  WIDTH="30%" HEIGHT="40%"></center>
+</BODY>
+</HTML>

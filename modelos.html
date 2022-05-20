@@ -1,0 +1,185 @@
+﻿<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal2.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="modelos.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="memorias.html">1.2 Analisis de los componentes.</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="organiacion.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="estructuras.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="ciclo.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="CPUReales.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="chip.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="apps.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="ambientes.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="basicos.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="Paralela.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="compartida.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="distribuida.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="estudio.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+
+	 </UL>
+	</DIV>
+	
+	<bR><BR><bR><BR>
+	<h3>1.1.1 Arquitecturas Clasicas.</h3>
+	<p>Estas arquitecturas se desarrollaron en las primeras computadoras electromecanicas y de tubos de vacio. 
+	Aun son usadas en procesadores empotrados de gama baja y son la base de la mayoria de las arquitecturas modernas.
+	</p>
+<h4>Arquitectura Mauchly-Eckert (Von Newman)</h4>
+
+<p>Esta arquitectura fue utilizada en la computadora ENIAC. Consiste en una unidad central de proceso que se comunica a traves de un solo bus con un banco de memoria en donde se almacenan tanto los codigos de instruccion del programa, como los datos que seran procesados por este.
+Esta arquitectura es la mas empleada en la actualidad ya, que es muy versatil. Ejemplo de esta versatilidad es el funcionamiento de los compiladores, los cuales son programas que toman como entrada un archivo de texto conteniendo codigo fuente y generan como datos de salida, 
+el codigo maquina que corresponde a dicho codigo fuente (Son programas que crean o modifican otros programas). Estos datos de salida pueden ejecutarse como un programa posteriormente ya que se usa la misma memoria para datos y para el codigo del programa.
+La principal desventaja de esta arquitectura, es que el bus de datos y direcciones  unico se convierte en un cuello de botella por el cual debe 
+pasar toda la informacion que se lee de o se escribe a la memoria, obligando a que todos los accesos a esta sean secuenciales. Esto limita el grado de paralelismo 
+(acciones que se pueden realizar al mismo tiempo) y por lo tanto, el desempeno de la computadora. Este efecto se conoce como el cuello de botella de Von Newman.
+En esta arquitectura aparecio por primera vez el concepto de programa almacenado. Anteriormente la secuencia de las operaciones  era dictada por el alambrado de 
+la unidad de control, y cambiarla implicaba un proceso de recableado laborioso, lento (hasta tres semanas) y propenso a errores. 
+En esta arquitectura se asigna un codigo numerico a cada instruccion. Dichos codigos se almacenan en la misma unidad de memoria que los datos que van a procesarse, para ser ejecutados en el orden en que se encuentran almacenados en memoria. Esto permite cambiar rapidamente la aplicacion de la computadora y dio origen a las computadoras de proposito general.
+Mas a detalle, el procesador se subdivide en una unidad de control (C.U.), una unidad logica aritmetica (A.L.U.) y una serie de registros. 
+Los registros sirven para almacenar internamente datos y estado del procesador. La unidad aritmetica logica proporciona la capacidad de realizar operaciones aritmeticas y logicas. La unidad de control genera las señales de control para leer el código de las instrucciones, decodificarlas y hacer que la ALU las ejecute.
+</p>	
+
+	<CENTER><img src="imagenes/Newman.jpg"  WIDTH="50%" HEIGHT="40%"></CENTER>
+
+<h4>Arquitectura Harvard</h4>
+
+<p>	
+Esta arquitectura surgio en la universidad del mismo nombre, poco despues de que la arquitectura Von Newman apareciera en la universidad de Princeton.
+Al igual que en la  arquitectura Von Newman, el programa se almacena como un codigo numerico en la memoria, pero no en el mismo espacio de memoria ni en el mismo 
+formato que los datos. 
+Por ejemplo, se pueden almacenar las instrucciones en doce bits en la memoria de programa, mientras los datos de almacenan en ocho bits en una memoria aparte.
+El hecho de tener un bus separado para el programa y otro para los datos permite que se lea el codigo de operacion de una instruccion, al mismo tiempo se lee
+de la memoria de datos los operados de la instruccion previa. Asi se evita el problema del cuello de botella de Von Newman y se obtiene un mejor desempeño.
+En la actualidad la mayoria de los procesadores modernos se conectan al exterior de manera similar a a la arquitectura Von Newman, 
+con un banco de memoria masivo unico, pero internamente incluyen varios niveles de memoria cache con bancos separados en cache de programa y cache de datos, 
+buscando un mejor desempeño sin perder la versatilidad.
+</p>	
+	<CENTER><img src="imagenes/Harvard.jpg"  WIDTH="50%" HEIGHT="40%"></CENTER>
+
+
+<h3>1.1.2 Arquitecturas Segmentadas.</h3>
+<P>
+Las arquitecturas segmentadas o con segmentacion del cauce buscan mejorar el desempeño realizando paralelamente varias etapas del ciclo de instruccion al mismo tiempo. 
+El procesador se divide en varias unidades funcionales independientes y se dividen entre ellas el procesamiento de las instrucciones. 
+Para comprender mejor esto, supongamos  que un procesador simple tiene un ciclo de instruccion sencillo consistente solamente en una etapa de busqueda del 
+codigo de instruccion y en otra etapa de ejecucion de la instruccion. En un procesador sin segmentacion del cauce, las dos etapas se realizarian de manera 
+secuencial para cada una de las instrucciones, como lo muestra la siguiente figura.
+</p>
+	<CENTER><img src="imagenes/segmentada.JPG"  WIDTH="30%" HEIGHT="20%"></CENTER>
+<p>Busqueda y ejecucion en secuencia de tres instrucciones en un procesador sin segmentacion del cause
+En un procesador con segmentacion del cauce, cada una de estas etapas se asigna a una unidad funcional diferente, 
+la busqueda a la unidad de busqueda y la ejecucion a la unidad de ejecucion. Estas unidades pueden trabajar en forma paralela en instrucciones diferentes. 
+Estas unidades se comunican por medio de una cola de instrucciones en la que la unidad de busqueda coloca los codigos de instruccion que leyo para que la 
+unidad de ejecucion los tome de la cola y los ejecute. Esta cola se parece a un tubo donde las instrucciones entran por un extremo y salen por el otro.
+De esta analogia proviene el nombre en ingles: Pipelining o entubamiento.	
+Comunicacion entre las unidades en un procesador con segmentacion de cauce.</p>
+	<CENTER><img src="imagenes/segmantada2.jpg"  WIDTH="50%" HEIGHT="30%"></CENTER>
+
+<p>
+Completando el ejemplo anterior, en un procesador con segmentacion, la unidad de busqueda comenzaria buscando el codigo de la primera instruccion en el primer 
+ciclo de reloj. Durante el segundo ciclo de reloj, la unidad de busqueda obtendría el código de la instruccion 2, mientras que la unidad de ejecucion ejecuta la 
+instruccion 1 y asi sucesivamente. La siguiente figura muestra este proceso.
+En este esquema sigue tomando el mismo numero de ciclos de reloj (el mismo tiempo), pero como se trabaja en varias instrucciones al mismo tiempo, el numero 
+promedio de instrucciones por segundo se multiplica. La mejora en el rendimiento no es proporcional al numero de segmentos en el cauce debido a que cada etapa 
+no toma el mismo tiempo en realizarse, ademas de que se puede presentar competencia por el uso de algunos recursos como la memoria principal. Otra razon por 
+la que las ventajas de este esquema se pierden es cuando se encuentra un salto en el programa y todas las instrucciones que ya se buscaron  y se encuentran 
+en la cola, deben descartarse y comenzar a buscar las instrucciones desde cero a partir de la dirección a la que se salto. Esto reduce el desempeño del procesador 
+y aún se investigan maneras de predecir los saltos para evitar este problema.
+</p>
+	<CENTER><img src="imagenes/segmantada3.jpg"  WIDTH="50%" HEIGHT="40%"></CENTER>
+
+<h3>1.1.3 Arquitecturas de Multi-procesamiento.</h3>
+<p>
+Cuando se desea incrementar el desempeño mas alla de lo que permite la tecnica de segmentacion del cauce (limite teorico de una instruccion por ciclo de reloj),
+ se requiere utilizar mas de un procesador para la ejecucion del programa de aplicacion.
+<BR>
+Las CPU de multiprocesamiento se clasifican de la siguiente manera (Clasificación de Flynn):</p>
+
+
+<p><ul>
+<li><p> SISO – (Single Instruction, Single Operand) computadoras Monoprocesador </li></p>
+<li><p> SIMO – (Single Instruction, Multiple Operand) procesadores vectoriales, Extenciones MMX </li></p>
+<li><p> MISO – (Multiple Instruction, Single Operand) No implementado </li></p>
+<li><p> MIMO – (Multiple Instruction, Multiple Operand) sistemas SMP, Clusters, GPUs </li></p>
+</ul></p>
+
+<p>
+Procesadores vectoriales – Son computadoras pensadas para aplicar un mismo algoritmo numerico a una serie de datos matriciales, 
+en especial en la simulacion de sistemas fisicos complejos, tales como simuladores para predecir el clima, explosiones atomicas, reacciones quimicas complejas, etc.
+, donde los datos son representados como grandes numeros de datos en forma matricial sobre los que se deben se aplicar el mismo algoritmo numerico.
+La mayoria de los procesadores modernos incluye algunas instrucciones de tipo vectorial, tales como las extensiones al conjunto de instrucciones tales
+ como MMX y SSE. Estas instrucciones les permiten procesar flujos multimedia más eficientemente.
+Los Procesadores Digitales de Señales (DSP), son procesadores especializados en el procesamiento de señales tales como audio, vídeo, radar, sonar, radio, etc. 
+Cuentan con instrucciones tipo vectorial que los hace muy aptos para dicha aplicación. Suelen utilizarse en conjunto con un microcontrolador en dispositivos 
+como reproductores de audio, reproductores de dvd y Blueray, teléfonos celulares, sistemas de entretenimiento, sistemas de adquisición de datos, instrumentos 
+médicos, controles industriales, etc.
+En los sistemas SMP (Simetric Multiprocesesors), varios procesadores comparten la misma memoria principal y perifericos de I/O, 
+Normalmente conectados por un bus comun. Se conocen como simetricos, ya que ningun procesador toma el papel de maestro y los demas de esclavos, 
+sino que todos tienen derechos similares en cuanto al acceso a la memoria y perifericos y ambos son administrados por el sistema operativo.
+Pueden formarse con varios nucleos en un solo circuito integrado o con varios circuitos integrados en una misma tarjeta madre. La primera opcion 
+ha sido popularizada al hacerse mas economicos los procesadores multinucleo de los principales fabricantes y con su uso en sistemas de gama media y baja, 
+e inclusive en teléfonos celulares y tabletas. La segunda opcion fue la que se uso en un principio y sigue siendo usada en en estaciones de trabajo y en 
+servidores de alto rendimiento debido a que incrementa el poder computacional del sistema, pero tambien incrementa considerablemente el costo del sistema.
+</p>
+	<CENTER><img src="imagenes/multi.jpg"  WIDTH="50%" HEIGHT="50%"></CENTER>	
+
+<p>Diagrama a bloques de un sistema multi-procesador simetrico.
+Los Clusters son conjuntos de computadoras independientes conectadas en una red de area local o por un bis de interconexion y que trabajan cooperativamente 
+para resolver un problema. Es clave en su funcionamiento contar con un sistema operativo y programas de aplicación capaces de distribuir el trabajo entre las 
+computadoras de la red. Este tipo de computadora paralela se ha vuelto muy popular por que permite usar los avances en los procesadores comerciales que tienen 
+una muy buena relación costo rendimiento y se puede incorporar rápidamente los avances que proporciona las nuevas tecnologias en cuanto es economicamente viable.
+Sin embargo, se debe tener cuidado al implementar la aplicacion, ya que si los datos que hay que pasar de un procesador a otro son demasiados, el tiempo empleado 
+en pasar informacion de un nodo a otro puede sobrepasar a la ganancia que se tiene al dividir el trabajo entre varios procesadores.
+</p>
+	<CENTER><img src="imagenes/multi2.jpg"  WIDTH="50%" HEIGHT="40%"></CENTER>
+<p>
+Diagrama a bloques de un cluster.
+Las unidades de  procesamiento grafico (Graphics Processing Unit GPU) – sistemas diseñados originalmente para el procesamiento de Graficos, 
+con multiples procesadores vectoriales sencillos compartiendo la misma memoria, la cual tambien puede ser accedida por el CPU. Por la gran cantidad de 
+nucleos con los que cuenta, logran un excelente desempeño al ejecutar algoritmos que se adaptan a ser paralelizados, a tal grado que muchas de las 
+supercomputadoras más rápidas de la actualidad utilizan estos procesadores, y los fabricantes de tarjetas graficas producen versiones de sus productos 
+especializadas en acelerar los cálculos de propósito general.
+</p>
+
+	<CENTER><img src="imagenes/multi3.jpg"  WIDTH="50%" HEIGHT="40%"></CENTER>
+
+
+</BODY>
+</HTML>

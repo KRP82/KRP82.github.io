@@ -1,0 +1,123 @@
+<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal2.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="modelos.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="memorias.html">1.2 Memorias</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="organizacion.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="estructuras.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="ciclo.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="CPUReales.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="chip.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="apps.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="ambientes.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="basicos.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="Paralela.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="compartida.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="distribuida.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="estudio.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+
+	</DIV>
+	
+<bR><BR><bR><BR>
+
+<h3>2.1 Organización del procesador</h3>
+	<p>La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. 
+Frecuentemente se le llama procesador.
+Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. Los registros visibles por el usuario pueden ser 
+de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del 
+procesador, un claro ejemplo es el contador de programa.
+Lleva a cabo una gran variedad de:<BR>
+•     Calculos<BR>
+•     Comparaciones numericas<BR>
+•     Transferencias de datos como respuesta a las peticiones de los programas que estan siendo ejecutados en memoria.
+<BR><BR>
+La CPU controla las operaciones basicas del ordenador enviando y recibiendo señales de control, direcciones de memoria y datos de 
+un lugar a otro de la 
+computadora a traves de un grupo de canales llamados BUS.
+La Unidad Central de Proceso está constituida internamente por:<BR>
+•     La Unidad de Control<BR>
+•     Unidad Aritmetico-Logica</p>
+<h4>Unidad Aritmetico-Logica (ALU)</h4>
+<P>
+Recibe los datos sobre los que efectua operaciones de calculo y comparaciones. Toma decisiones logicas (determina si una afirmacion es 
+correcta o falsa mediante reglas del algebra de Boole) y devuelve luego el resultado. Todo ello bajo supervisión de la unidad de control.
+</P>
+<h4>La Unidad de Control</h4>
+<P>La unidad de control le indica al resto del sistema como llevar a cabo las instrucciones de un programa. Comanda las señales electronicas 
+entre la memoria y la unidad aritmetico-logica, y entre el CPU y los dispositivos de entrada y salida. Para ejecutar cualquier programa, cada 
+comando del mismo se desglosa en instrucciones.
+Los procesadores utilizan la segmentacion de instrucciones para acelerar la ejecucion. La segmentacion de cauce se puede dividir en ciclo de instruccion
+ en varias etapas separadas que operan secuencialmente, tales como la captación de instruccion, decodificacion de instruccion, calculo de 
+direcciones de operando, ejecucion de instruccion y estructura del operando resultado.
+</P>
+	
+<P>
+A continuacion se muestra como se organiza un procesador, para esto se tiene que considerar los siguientes requisitos:
+
+<BR><BR><B>Captar instrucciones:</B> el procesador lee una instruccion de memoria (registro, cache o memoria principal).
+
+<BR><B>Interpretar instruccion:</B> la instruccion se codifica para determinar que accion es necesario.
+
+<BR><B>Captar datos:</B> la ejecución de una instruccion puede exigir leer datos de memoria o de un módulo de E/S.
+
+<BR><B>Procesar datos:</B> la ejecución de una instrucción puede exigir llevar a cabo alguna operación aritmética o lógica con los datos.
+
+<BR><B>Escribir datos:</B> los resultados de una ejecución pueden exigir escribir datos en la memoria o en el módulo de E/S.
+
+<BR><BR>Para hacer estas cosas, el procesador necesita almacenar instrucciones y datos temporalmente mientras una instrucción 
+está ejecutándose, en otras palabras el procesador necesita una pequeña memoria interna, también llamados registros.
+</P>
+
+<center><img src="imagenes/organizacion1.jpg"  WIDTH="40%" HEIGHT="50%"></center>
+
+<P>En esta figura se muestra una vision simplificada de un procesador, que indica su conexion con el resto de sistema, a traves del bus del sistema. 
+La ALU lleva a cabo el verdadero calculo o procesamiento de datos. La unidad de control controla la transferencia de 
+datos e instrucciones asi a dentro y asi afuera del procesador, y el funcionamiento de la ALU. Ademas la figura muestra 
+una memoria interna minima, que consta de un conjunto de posiciones de almacenamiento llamadas registros.</P>
+
+<center><img src="imagenes/organizacion2.jpg"  WIDTH="40%" HEIGHT="50%"></center>
+
+<P>En esta figura se indican los caminos de transferencia de datos y de la lógica de control, que incluye un elemento con el rotulo bus interno del procesador.
+ También se muestran los elementos básicos típicos de la ALU. Hay que observar la similitud entre la estructura interna del computador en su totalidad y 
+la estructura interna del procesador. En ambos casos hay una pequeña colección de elementos principales (computador: procesador, E/S, memoria; procesador:
+ unidad de control, ALU, registros) conectados por caminos de datos.
+</P>
+
+</BODY>
+</HTML>

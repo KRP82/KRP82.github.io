@@ -1,0 +1,82 @@
+<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal2.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="modelos.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="memorias.html">1.2 Memorias</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="organizacion.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="estructuras.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="ciclo.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="CPUReales.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="chip.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="apps.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="ambientes.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="basicos.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="Paralela.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="compartida.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="distribuida.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="estudio.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+
+	</DIV>
+	<br><br><br><br>
+
+<h3>4.4	Sistemas de memoria distribuida (multicomputadores)</h3>
+<P>Los sistemas de memoria distribuida o multicomputadores pueden ser de dos tipos básicos. El primer de ellos consta de un único computador con múltiples CPUs comunicadas por un bus de datos mientras que en el segundo se utilizan múltiples computadores, cada uno con su propio procesador, enlazados por una red de interconexión más o menos rápida.
+<BR<BR>>Sobre los sistemas de multicomputadores de memoria distribuida, se simula memorias compartidas. Se usan los mecanismos de comunicación y sincronización de sistemas multiprocesadores.
+<BR><BR><BR>Un clúster es un tipo de arquitectura paralela distribuida que consiste de un conjunto de computadores independientes interconectados operando de forma conjunta como único recurso computacional sin embargo, cada computador puede utilizarse de forma independiente o separada.
+En esta arquitectura, el computador paralelo es esencialmente una colección de procesadores secuenciales, cada uno 
+<BR>
+<BR>•  Cada nodo tiene rápido acceso a su propia memoria y acceso a la memoria de otros nodos mediante una red de comunicaciones, habitualmente una red de comunicaciones de alta velocidad.
+<BR>•  Los datos son intercambiados entre los nodos como mensajes a través de la red.
+<BR>•  Una red de ordenadores, especialmente si disponen de una interconexión de alta velocidad, puede ser vista como un multicomputador de memoria distribuida y como tal ser utilizada para resolver problemas mediante computación paralela.
+</P>
+
+<H4>4.4.1	Redes de interconexión estáticas</H4>
+<P>Las redes estáticas emplean enlaces directos fijos entre los nodos. Estos enlaces, una vez fabricado el sistema son difíciles de cambiar, por lo que la escalabilidad de estas topologías es baja. Las redes estáticas pueden utilizarse con eficiencia en los sistemas en que pueden predecirse el tipo de tráfico de comunicaciones entre sus procesadores.
+<BR><BR>Clases de redes de interconexión:
+<BR>•  Formación lineal: Se trata de una red unidimensional en que los nodos se conectan cada uno con el siguiente medianteN-1 enlaces formando una línea.
+<BR>•  Mallas y toros: Esta red de interconexión es muy utilizada en la práctica. Las redes en toro son mallas en que sus filas y columnas tienen conexiones en anillo, esto contribuye a disminuir su diámetro. Esta pequeña modificación permite convertir a las mallas en estructuras simétricas y además reduce su diámetro a la mitad.
+</P>
+
+
+
+<center><img src="imagenes/memoriadistribuida.jpg"  WIDTH="40%" HEIGHT="70%"></center>
+ <br><br><br><br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,111 @@
+<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal2.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="modelos.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="memorias.html">1.2 Memorias</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="organizacion.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="estructuras.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="ciclo.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="CPUReales.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="chip.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="apps.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="ambientes.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="basicos.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="Paralela.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="compartida.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="distribuida.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="estudio.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+
+	</DIV>
+	
+	<bR><bR><bR><bR>
+	<H4>3.1 Chipset.</h4>
+<p>Un chipset (traducido como circuito integrado auxiliar) es el conjunto de circuitos integrados diseñados
+ con base en la arquitectura de un procesador (en algunos casos, diseñados como parte integral de esa 
+arquitectura), permitiendo que ese tipo de procesadores funcionen en una placa base. Sirven de puente 
+de comunicación con el resto de componentes de la placa, como son la memoria, las tarjetas de expansión,
+ los puertos USB, ratón, teclado, etc.
+
+<br><br>Las placas base modernas suelen incluir dos integrados, denominados puente norte y puente sur, y suelen
+ ser los circuitos integrados más grandes después de la GPU y el microprocesador. Las últimas placa base 
+carecen de puente norte, ya que los procesadores de última generación lo llevan integrado.
+
+<br><br>El chipset determina muchas de las características de una placa base y por lo general la referencia de 
+la misma está relacionada con la del chipset.
+
+<br><br>A diferencia del microcontrolador, el procesador no tiene mayor funcionalidad sin el soporte de un chipset: 
+la importancia del mismo ha sido relegada a un segundo plano por las estrategias de mercadotecnia.
+
+<br><br>El Chipset es el que hace posible que la placa base funcione como eje del sistema, dando soporte a varios 
+componentes e interconectándolos de forma que se comuniquen entre ellos haciendo uso de diversos buses. 
+Es uno de los pocos elementos que tiene conexión directa con el procesador, gestiona la mayor parte de 
+la información que entra y sale por el bus principal del procesador, del sistema de vídeo y muchas veces de la memoria RAM.
+
+<br><br>En el caso de los computadores PC, es un esquema de arquitectura abierta que establece modularidad: el 
+Chipset debe tener interfaces estándar para los demás dispositivos. Esto permite escoger entre varios 
+dispositivos estándar, por ejemplo en el caso de los buses de expansión, algunas tarjetas madre pueden
+ tener bus PCI-Express y soportar diversos tipos de tarjetas de distintos anchos de bus (1x, 8x, 16x).
+
+<br><br>En el caso de equipos portátiles o de marca, el chipset puede ser diseñado a la medida y aunque no soporte
+ gran variedad de tecnologías, presentará alguna interfaz de dispositivo.</p>
+
+
+<center><img src="imagenes/chip.jpg"  WIDTH="40%" HEIGHT="50%"></center>
+
+
+<p>La terminología de los integrados ha cambiado desde que se creó el concepto del chipset a principio de los años 
+1990, pero todavía existe equivalencia haciendo algunas aclaraciones:
+El puente norte, northbridge, MCH (memory controller hub) o GMCH (graphic MCH), se usa como puente de enlace entre 
+el microprocesador y la memoria. Controla las funciones de acceso hacia y entre el microprocesador, la memoria RAM,
+ el puerto gráfico AGP o el PCI-Express de gráficos, y las comunicaciones con el puente sur. Al principio tenía 
+también el control de PCI, pero esa funcionalidad ha pasado al puente sur.
+
+<br><br>El puente sur, southbridge o ICH (input controller hub), controla los dispositivos asociados como son la controladora 
+de discos IDE, puertos USB, FireWire, SATA, RAID, ranuras PCI, ranura AMR, ranura CNR, puertos infrarrojos, disquetera, 
+LAN, PCI-Express 1x y una larga lista de todos los elementos que podamos imaginar integrados en la placa madre. 
+Es el encargado de comunicar el procesador con el resto de los periféricos.
+
+<br><br>En la actualidad los principales fabricantes de chipsets son AMD, ATI Technologies (comprada en 2006 por AMD),
+ Intel, NVIDIA, Silicon Integrated Systems y VIA Technologies.
+</P>
+	
+	
+
+</BODY>
+</HTML>
